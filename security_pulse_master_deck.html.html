@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Pulse Monitor - Master Pitch Deck</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * { box-sizing: border-box; }
+        body { background-color: #020617; display: grid; gap: 40px; grid-template-columns: 1fr; margin: 0; padding: 40px 0; place-items: center; }
+        .slide-container { align-items: center; background-color: #020617; border-radius: 12px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); display: flex; flex-direction: column; font-family: 'Urbanist', sans-serif; height: 720px; justify-content: center; overflow: hidden; padding: 60px; position: relative; width: 1280px; border: 1px solid #1e293b; }
+        .slide-container::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, transparent 70%); z-index: 0; }
+        .slide-container::after { background: rgba(255, 255, 255, 0.05); bottom: 40px; content: ''; height: 1px; left: 60px; position: absolute; right: 60px; }
+        .slide-container > * { position: relative; z-index: 1; }
+        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: #f8fafc; margin: 0; }
+        h1 span, h2 span, h3 span { color: #22c55e; }
+        p, li, td, th { color: #94a3b8; font-size: 20px; line-height: 1.5; }
+        .slide-title { font-size: 52px; font-weight: 700; margin-bottom: 40px; text-align: left; width: 100%; }
+        .content-area { align-items: center; display: flex; flex-direction: column; flex-grow: 1; justify-content: center; width: 100%; }
+        .title-layout { text-align: center; }
+        .title-layout h1 { font-size: 88px; letter-spacing: -2px; }
+        .title-layout .subtitle { font-size: 28px; color: #cbd5e1; margin-top: 20px; }
+        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%; align-items: center; }
+        .tiled-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; }
+        .tile { background: #0f172a; border: 1px solid #1e293b; padding: 40px; border-radius: 24px; text-align: center; }
+        .tile .icon { font-size: 44px; color: #22c55e; margin-bottom: 25px; }
+        .bullet-list ul { list-style: none; padding: 0; }
+        .bullet-list li { position: relative; padding-left: 45px; margin-bottom: 20px; }
+        .bullet-list i { position: absolute; left: 0; top: 5px; color: #22c55e; font-size: 24px; }
+    </style>
+</head>
+<body>
+
+<div class="slide-container" id="slide1">
+    <div class="title-layout">
+        <h1>Security <span>Pulse</span> Monitor</h1>
+        <p class="subtitle">Future-Proof Intelligence for MeDo Developers</p>
+        <div style="margin-top: 40px; padding: 10px 20px; border: 1px solid #22c55e; border-radius: 40px; color: #22c55e; font-weight: 500; display: inline-block;">
+            VOTE FOR INNOVATION & PRODUCTIVITY
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide4">
+    <h2 class="slide-title">Meet <span>Security Pulse</span></h2>
+    <div class="content-area">
+        <div class="two-column">
+            <div>
+                <p>SPM is a native MeDo plugin that acts as a 24/7 security shield. It analyzes code as you type, finding bugs before they reach production.</p>
+                <div class="bullet-list">
+                    <ul>
+                        <li><i class="fa-solid fa-shield-heart"></i> <strong>Real-time Protection:</strong> Zero-lag monitoring.</li>
+                        <li><i class="fa-solid fa-wand-magic-sparkles"></i> <strong>AST Auto-Fixes:</strong> Intelligent code repairs.</li>
+                        <li><i class="fa-solid fa-bolt"></i> <strong>Productivity Boost:</strong> Built for high-speed teams.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="slide-container" id="slide5">
+    <h2 class="slide-title">The <span>Core</span> Engine</h2>
+    <div class="content-area">
+        <div class="tiled-content">
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-microchip"></i></div>
+                <h3>Background Engine</h3>
+                <p>Heavy-lifting logic runs quietly in the background, ensuring 100% smooth typing experience.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-code-branch"></i></div>
+                <h3>AST Intelligence</h3>
+                <p>Parsing code into trees to accurately detect and fix ReDoS and Secret Leaks at the node level.</p>
+            </div>
+            <div class="tile">
+                <div class="icon"><i class="fa-solid fa-recycle"></i></div>
+                <h3>Resilient Batch Fix</h3>
+                <p>Independent file commits mean failure in one file never rolls back successes in others.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
