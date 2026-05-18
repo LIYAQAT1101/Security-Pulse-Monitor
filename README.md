@@ -14,3 +14,4 @@ The plugin performs real-time auditing by scanning files quietly in the backgrou
 
 ## Files in this Repository
 This repository contains our strategic pitch deck presentation named security_pulse_master_deck.html, along with api.py, which is the demo vulnerable file we used in our video presentation.
+ 
