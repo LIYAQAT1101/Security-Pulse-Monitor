@@ -3,87 +3,182 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Security Pulse Monitor - Master Pitch Deck</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Security Pulse Monitor - Master Deck</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { box-sizing: border-box; }
-        body { background-color: #020617; display: grid; gap: 40px; grid-template-columns: 1fr; margin: 0; padding: 40px 0; place-items: center; }
-        .slide-container { align-items: center; background-color: #020617; border-radius: 12px; box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6); display: flex; flex-direction: column; font-family: 'Urbanist', sans-serif; height: 720px; justify-content: center; overflow: hidden; padding: 60px; position: relative; width: 1280px; border: 1px solid #1e293b; }
-        .slide-container::before { content: ''; position: absolute; top: -150px; right: -150px; width: 500px; height: 500px; background: radial-gradient(circle, rgba(34, 197, 94, 0.08) 0%, transparent 70%); z-index: 0; }
-        .slide-container::after { background: rgba(255, 255, 255, 0.05); bottom: 40px; content: ''; height: 1px; left: 60px; position: absolute; right: 60px; }
-        .slide-container > * { position: relative; z-index: 1; }
-        h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; color: #f8fafc; margin: 0; }
-        h1 span, h2 span, h3 span { color: #22c55e; }
-        p, li, td, th { color: #94a3b8; font-size: 20px; line-height: 1.5; }
-        .slide-title { font-size: 52px; font-weight: 700; margin-bottom: 40px; text-align: left; width: 100%; }
-        .content-area { align-items: center; display: flex; flex-direction: column; flex-grow: 1; justify-content: center; width: 100%; }
-        .title-layout { text-align: center; }
-        .title-layout h1 { font-size: 88px; letter-spacing: -2px; }
-        .title-layout .subtitle { font-size: 28px; color: #cbd5e1; margin-top: 20px; }
-        .two-column { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; width: 100%; align-items: center; }
-        .tiled-content { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; width: 100%; }
-        .tile { background: #0f172a; border: 1px solid #1e293b; padding: 40px; border-radius: 24px; text-align: center; }
-        .tile .icon { font-size: 44px; color: #22c55e; margin-bottom: 25px; }
-        .bullet-list ul { list-style: none; padding: 0; }
-        .bullet-list li { position: relative; padding-left: 45px; margin-bottom: 20px; }
-        .bullet-list i { position: absolute; left: 0; top: 5px; color: #22c55e; font-size: 24px; }
+        body { font-family: 'Inter', sans-serif; background-color: #0f172a; }
+        .glass-panel { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .pulse-animation { animation: pulse 2s infinite; }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+        }
     </style>
 </head>
-<body>
+<body class="text-gray-200 h-screen flex flex-col p-6">
 
-<div class="slide-container" id="slide1">
-    <div class="title-layout">
-        <h1>Security <span>Pulse</span> Monitor</h1>
-        <p class="subtitle">Future-Proof Intelligence for MeDo Developers</p>
-        <div style="margin-top: 40px; padding: 10px 20px; border: 1px solid #22c55e; border-radius: 40px; color: #22c55e; font-weight: 500; display: inline-block;">
-            VOTE FOR INNOVATION & PRODUCTIVITY
+    <header class="flex justify-between items-center mb-8 pb-4 border-b border-gray-700">
+        <div>
+            <h1 class="text-3xl font-bold text-white flex items-center gap-3">
+                <i class="fa-solid fa-shield-halved text-emerald-500"></i>
+                Security Pulse Monitor
+            </h1>
+            <p class="text-gray-400 text-sm mt-1">Cloud-Tethered Enterprise Security Agent</p>
         </div>
-    </div>
-</div>
+        <div class="flex items-center gap-4">
+            <div class="flex items-center gap-2 bg-emerald-900/50 text-emerald-400 px-4 py-2 rounded-full border border-emerald-700/50">
+                <i class="fa-solid fa-lock text-sm"></i>
+                <span class="text-sm font-semibold tracking-wide">E2E SECURED PIPELINE</span>
+            </div>
+            <div class="h-10 w-10 bg-blue-600 rounded-full flex items-center justify-center font-bold shadow-lg">
+                SP
+            </div>
+        </div>
+    </header>
 
-<div class="slide-container" id="slide4">
-    <h2 class="slide-title">Meet <span>Security Pulse</span></h2>
-    <div class="content-area">
-        <div class="two-column">
-            <div>
-                <p>SPM is a native MeDo plugin that acts as a 24/7 security shield. It analyzes code as you type, finding bugs before they reach production.</p>
-                <div class="bullet-list">
-                    <ul>
-                        <li><i class="fa-solid fa-shield-heart"></i> <strong>Real-time Protection:</strong> Zero-lag monitoring.</li>
-                        <li><i class="fa-solid fa-wand-magic-sparkles"></i> <strong>AST Auto-Fixes:</strong> Intelligent code repairs.</li>
-                        <li><i class="fa-solid fa-bolt"></i> <strong>Productivity Boost:</strong> Built for high-speed teams.</li>
-                    </ul>
+    <main class="grid grid-cols-1 lg:grid-cols-3 gap-6 flex-grow">
+
+        <section class="glass-panel rounded-xl p-6 flex flex-col">
+            <h2 class="text-xl font-semibold mb-4 border-b border-gray-600 pb-2">
+                <i class="fa-solid fa-network-wired mr-2 text-blue-400"></i> Network Health
+            </h2>
+            <div class="flex-grow flex flex-col justify-center items-center">
+                <div class="h-32 w-32 rounded-full border-4 border-emerald-500 flex items-center justify-center pulse-animation mb-6">
+                    <span class="text-2xl font-bold text-emerald-400">SECURE</span>
+                </div>
+                <div class="w-full bg-gray-800 rounded-lg p-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-sm text-gray-400">Local Ports Scanned</span>
+                        <span class="font-mono text-white">1,024</span>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-gray-400">Exposed Services</span>
+                        <span class="font-mono text-emerald-400">0 Detected</span>
+                    </div>
+                </div>
+            </div>
+            <button class="mt-4 w-full bg-blue-600 hover:bg-blue-700 text-white py-2 rounded-lg transition">
+                Rescan Perimeter
+            </button>
+        </section>
+
+        <section class="glass-panel rounded-xl p-6 lg:col-span-2 flex flex-col">
+            <div class="flex justify-between items-center mb-4 border-b border-gray-600 pb-2">
+                <h2 class="text-xl font-semibold">
+                    <i class="fa-solid fa-bug mr-2 text-red-400"></i> AST Scan Results
+                </h2>
+                <span class="bg-red-500/20 text-red-400 text-xs px-2 py-1 rounded border border-red-500/50">
+                    2 Critical Issues
+                </span>
+            </div>
+            
+            <div class="flex-grow overflow-y-auto pr-2 space-y-4">
+                <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-red-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="font-bold text-red-400">client-side-validation-exposure</h3>
+                            <p class="text-xs text-gray-400 mt-1">Found in: <code>/src/auth/otp-verify.js:42</code></p>
+                        </div>
+                        <span class="bg-gray-700 text-xs px-2 py-1 rounded">High Risk</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-3">
+                        Critical: Sensitive OTP validation detected on the frontend. Never trust client-side verification as it exposes expected values in network responses.
+                    </p>
+                    <div class="flex gap-2">
+                        <button onclick="generatePatch('otp')" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-1.5 rounded transition flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate AI Patch
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-gray-800 p-4 rounded-lg border-l-4 border-orange-500">
+                    <div class="flex justify-between items-start mb-2">
+                        <div>
+                            <h3 class="font-bold text-orange-400">missing-payload-verification</h3>
+                            <p class="text-xs text-gray-400 mt-1">Found in: <code>/src/api/update-user.js:88</code></p>
+                        </div>
+                        <span class="bg-gray-700 text-xs px-2 py-1 rounded">Medium Risk</span>
+                    </div>
+                    <p class="text-sm text-gray-300 mb-3">
+                        API request modifies sensitive state (examiner_id) without appending a secure server-validated session token (JWT).
+                    </p>
+                    <div class="flex gap-2">
+                        <button onclick="generatePatch('jwt')" class="bg-indigo-600 hover:bg-indigo-700 text-white text-sm px-4 py-1.5 rounded transition flex items-center gap-2">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i> Generate AI Patch
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="aiModal" class="hidden fixed inset-0 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4 z-50">
+        <div class="glass-panel w-full max-w-3xl rounded-xl p-6 shadow-2xl border border-indigo-500/30">
+            <div class="flex justify-between items-center mb-4 border-b border-gray-600 pb-4">
+                <h2 class="text-xl font-bold flex items-center gap-2">
+                    <i class="fa-brands fa-google text-blue-400"></i> Gemini AI Patch Engine
+                </h2>
+                <button onclick="closeModal()" class="text-gray-400 hover:text-white">
+                    <i class="fa-solid fa-xmark text-xl"></i>
+                </button>
+            </div>
+            
+            <div id="loadingState" class="py-12 flex flex-col items-center justify-center text-indigo-400">
+                <i class="fa-solid fa-circle-notch fa-spin text-4xl mb-4"></i>
+                <p>Analyzing context & streaming secure code patch...</p>
+                <p class="text-xs text-gray-500 mt-2"><i class="fa-solid fa-lock"></i> E2E Encrypted Transit</p>
+            </div>
+
+            <div id="patchResult" class="hidden">
+                <p class="text-sm text-emerald-400 mb-2"><i class="fa-solid fa-check-circle"></i> Secure Patch Generated</p>
+                <pre class="bg-gray-900 p-4 rounded text-sm text-gray-300 font-mono overflow-x-auto border border-gray-700"><code id="codeBlock">
+// Securing API Call - AI Generated Patch
+async function verifyAction(data) {
+    const response = await fetch('/api/secure/verify', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bearer ${sessionStorage.getItem('secureToken')}` // Secure JWT
+        },
+        body: JSON.stringify(data)
+    });
+    return response.json();
+}
+                </code></pre>
+                <div class="mt-4 flex justify-end gap-3">
+                    <button onclick="closeModal()" class="px-4 py-2 text-sm text-gray-400 hover:text-white">Cancel</button>
+                    <button onclick="applyPatch()" class="px-4 py-2 bg-emerald-600 hover:bg-emerald-700 text-white text-sm rounded transition">
+                        Apply Fix to Codebase
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="slide-container" id="slide5">
-    <h2 class="slide-title">The <span>Core</span> Engine</h2>
-    <div class="content-area">
-        <div class="tiled-content">
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-microchip"></i></div>
-                <h3>Background Engine</h3>
-                <p>Heavy-lifting logic runs quietly in the background, ensuring 100% smooth typing experience.</p>
-            </div>
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-code-branch"></i></div>
-                <h3>AST Intelligence</h3>
-                <p>Parsing code into trees to accurately detect and fix ReDoS and Secret Leaks at the node level.</p>
-            </div>
-            <div class="tile">
-                <div class="icon"><i class="fa-solid fa-recycle"></i></div>
-                <h3>Resilient Batch Fix</h3>
-                <p>Independent file commits mean failure in one file never rolls back successes in others.</p>
-            </div>
-        </div>
-    </div>
-</div>
+    <script>
+        function generatePatch(type) {
+            document.getElementById('aiModal').classList.remove('hidden');
+            document.getElementById('loadingState').classList.remove('hidden');
+            document.getElementById('patchResult').classList.add('hidden');
+            
+            // Simulate AI API Call Delay
+            setTimeout(() => {
+                document.getElementById('loadingState').classList.add('hidden');
+                document.getElementById('patchResult').classList.remove('hidden');
+            }, 2000);
+        }
 
+        function closeModal() {
+            document.getElementById('aiModal').classList.add('hidden');
+        }
+
+        function applyPatch() {
+            alert("✅ Enterprise-grade secure patch applied successfully via multi-cursor sync!");
+            closeModal();
+        }
+    </script>
 </body>
 </html>
